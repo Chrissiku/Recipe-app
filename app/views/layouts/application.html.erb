@@ -13,6 +13,12 @@
   </head>
 
   <body>
+  <div class="navbar">
+  <% if user_signed_in? %> 
+      <h3><%= current_user.email %></h3>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: 'btn' %>
+  <% end %>
+  </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
