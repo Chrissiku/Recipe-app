@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   end
 
   root 'users#index'
-  resources :users
+
+  
+  resources :inventories, only: [:index, :show]
+  
+
+
 end
