@@ -1,12 +1,5 @@
 class Inventory < ApplicationRecord
-
-    belongs_to :user
-
-    has_many :inventory_foods
-
-    
-    def recent_inventory
-        inventories.order(create_at: :desc).limit(3)
-    end
-
+  validates :name, presence: true, length: { maximum: 150 }
+  belongs_to :user, foreign_key: 'user_id'
+  has_many :inventory_foods, dependent: :destroy
 end

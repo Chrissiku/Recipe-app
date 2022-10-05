@@ -8,6 +8,7 @@ gem 'devise'
 gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
+gem 'cancancan'
 gem 'childprocess'
 gem 'ffi'
 
