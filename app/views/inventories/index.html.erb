@@ -1,1 +1,10 @@
-<h1>This is the list of Inventories page</h1>
+<div class="inventories-container">
+
+    <% @inventories.each do |inventory| %>
+        <div class="user-recent-inventory">
+            <h2 class="user-post-title">Inventory : <%= inventory.id %></h2>
+            <p class="user-post-text"><%= inventory.name %></p>
+        </div>
+    <% end%>
+
+</div>

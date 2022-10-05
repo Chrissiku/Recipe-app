@@ -1,14 +1,12 @@
 <div class="users-container">
-    
-<h1>Hello welcome to our App</h1>
-
-    <% if current_user %>
-           <% else %>
-        <p>      
-            <%= link_to "Sign In", new_user_session_path %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-        </p>
-
-    <% end %>
-    
+    <h1 class="users-heading">Users Count <%= @users.length%></h1>
+    <% @users.each do |user| %>
+        
         <div class="user-box">
+            <div class="user-info-box">
+                <h2 class="user-name"><%= user.name %></h2>
+            </div>
+        </div>
+        <% end%>
+    
+</div>

@@ -1,1 +1,31 @@
-<h1>This is the page for the details for that perticuler inventory</h1>
+<div class="inventories-show">
+   
+
+<h1>Inventory:<%=Inventory.id%></h1>
+<table>
+  <tr>
+    <th><%= "Food"%> </th>
+    <th><%= "Quantity"%> </th>
+    <th><%="Action"%> </th>
+  </tr>
+<% @inventory_foods.each do |inventory_food| %>
+  <tr>
+    <td><%= inventory_food.quantity%></td>
+  </tr>
+<% end %>
+
+
+# <% end %>
+# <% @foods.each do |food| %>
+#     <tr>
+#       <td><%= food.name%></td>
+#     </tr>
+# <% end %>
+# <% @inventories.each do |inventory| %>
+#     <tr>
+#       <td><%= inventory.name%></td>
+#     </tr>
+# <% end %>
+  </table>
+
+</div>
