@@ -24,7 +24,7 @@ class InventoriesController < ApplicationController
     else
       flash.now[:alert] = 'Inventory could not be created.'
       render :new
-    end 
+    end
   end
 
   def destroy

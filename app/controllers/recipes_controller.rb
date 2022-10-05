@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
 
   before_action :set_recipe, only: %i[show destroy]
   before_action :authenticate_user!, only: %i[new create destroy]
-  
+
   def index
     @recipes = Recipe.all
   end
@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
   def show
     @foods = @recipe.recipe_foods.includes(:food)
   end
-  
+
   private
 
   def set_recipe

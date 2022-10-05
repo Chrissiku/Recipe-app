@@ -28,7 +28,7 @@ class InventoryFoodsController < ApplicationController
     redirect_to user_inventory_path(params[:id]), flash: { success: 'Inventory food has been added successfully!' }
   end
 
-   def inventory_food_params
+  def inventory_food_params
     params.require(:inventory_food).permit(:food_list, :quantity)
   end
 end

@@ -8,9 +8,9 @@ gem 'devise'
 gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
+gem 'cancancan'
 gem 'childprocess'
 gem 'ffi'
-gem 'cancancan'
 
 gem 'importmap-rails'
 gem 'pg', '~> 1.1'
