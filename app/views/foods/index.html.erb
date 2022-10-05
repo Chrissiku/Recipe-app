@@ -1,0 +1,36 @@
+<h1>Foods List</h1>
+<div>
+    <div class="bg-light d-flex flex-row-reverse">
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Food</th>
+            <th scope="col">Measurement unit</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if @foods.count == 0 %>
+                <tr class="Alert alert-warning text-center fs-3">                   
+                    <td colspan="5">
+                        <span>No Food Registered</span>
+                    </td>                        
+                </tr>
+            <% else %>
+                <% count = 0 %>
+                <% @foods.each  do |item| %>
+                    <tr>
+                        <th scope="row"><%= count = count + 1 %></th>
+                        <td><%= item.name %></td>
+                        <td><%= item.measurement_unit %></td>
+                        <td><b>$ </b><%= item.price %></td>
+                    </tr>
+                <% end %> 
+            <% end %>       
+        </tbody>
+    </table>
+</div>
