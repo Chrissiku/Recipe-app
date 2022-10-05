@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
     authorize_resource
   end
 
-  before_action :set_recipe, only: %i[show delete]
+  before_action :set_recipe, only: %i[show destroy]
   before_action :authenticate_user!, only: %i[new create destroy]
   
   def index
