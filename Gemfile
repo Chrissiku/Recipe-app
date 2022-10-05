@@ -10,6 +10,7 @@ gem 'sprockets-rails'
 
 gem 'childprocess'
 gem 'ffi'
+gem 'cancancan'
 
 gem 'importmap-rails'
 gem 'pg', '~> 1.1'
