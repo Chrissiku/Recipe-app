@@ -13,6 +13,11 @@
       </tr>
     </thead>
     <tbody>
+    <% if @foods.count == 0 %>
+      <tr class="alert alert-warning">
+        <td colspan="3" class="text-center">No foods in this inventory</td>
+      </tr>      
+    <% else %>
       <% @foods.each do |food| %>
         <tr>
           <td><%= food.food.name %></td>
@@ -20,6 +25,7 @@
           <td><%= button_to 'Delete', "/inventory_foods/#{@inventory.id}/destroy/#{food.id}", method: :delete, class: "btn btn-outline-danger" %></td>
         </tr>
       <% end %>
+    <% end %>
     </tbody>
   </table>
 </div>
