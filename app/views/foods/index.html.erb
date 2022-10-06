@@ -22,14 +22,16 @@
                 </tr>
             <% else %>
                 <% count = 0 %>
-                <% @foods.each  do |item| %>
-                    <tr>
-                        <th scope="row"><%= count = count + 1 %></th>
-                        <td><%= item.name %></td>
-                        <td><%= item.measurement_unit %></td>
-                        <td><b>$ </b><%= item.price %></td>
-                        <td>   <%= button_to "delete", food_path(:id => item.id), :method => :delete %></td>                 
-                    </tr>
+                <% @foods.each  do |food| %>
+                    <% if can? :manage, food %>
+                        <tr>
+                            <th scope="row"><%= count = count + 1 %></th>
+                            <td ><%= food.name %></td>
+                            <td><%= food.measurement_unit %></td>
+                            <td><b>$ </b><%= food.price %></td>
+                            <td><%= button_to "delete", food_path(:id => food.id), :method => :delete %></td>                 
+                        </tr>
+                    <% end %>
                 <% end %> 
             <% end %>       
         </tbody>

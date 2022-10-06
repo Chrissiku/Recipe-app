@@ -1,6 +1,6 @@
 <div class="d-flex flex-column align-items-center justify-content-center p-5" >
     <h3> Create a new inventory: </h3>
-    <%= form_with model: @inventory, class: 'row g-2', url: user_inventories_path, method: :post do |form| %>
+    <%= form_with model: @inventory, url: user_inventories_path, class: 'row g-2', method: :post do |form| %>
         <div class="col">
             <%= form.text_field :name, placeholder:'Inventory name', class:'form-control' %>
         </div>
