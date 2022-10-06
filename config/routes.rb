@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'test_foods/index'
+  get 'test_foods/create'
+  get 'test_foods/new'
+  get 'test_foods/destroy'
   devise_for :users
 
   root "public_recipes#index"
