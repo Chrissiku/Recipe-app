@@ -28,8 +28,7 @@
                         <td><%= item.name %></td>
                         <td><%= item.measurement_unit %></td>
                         <td><b>$ </b><%= item.price %></td>
-                        <td>   <%= button_to "delete", food_path(:id => item.id), :method => :delete %>
-                  </td>
+                        <td>   <%= button_to "delete", food_path(:id => item.id), :method => :delete %></td>                 
                     </tr>
                 <% end %> 
             <% end %>       
