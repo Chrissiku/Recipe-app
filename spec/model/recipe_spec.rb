@@ -1,7 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Recipe , type: :model do
-    it { should belongs_to(:user) }
-    it { should has_many(:recipe_foods) }
-    it { should has_many(:foods).through(:recipe_foods) }
+RSpec.describe Recipe, type: :model do
+  # Test associations.
+  describe 'associations' do
+    it 'has many RecipeFood' do
+      assc = described_class.reflect_on_association(:recipe_foods)
+      expect(assc.macro).to eq :has_many
     end
+
+    it 'belongs to User' do
+      assc = described_class.reflect_on_association(:user)
+      expect(assc.macro).to eq :belongs_to
+    end
+  end
+end

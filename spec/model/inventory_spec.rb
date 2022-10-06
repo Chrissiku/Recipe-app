@@ -1,15 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe Inventory , type: :model do
-    it { should have_many(:inventory_foods) }
-    it { should belong_to(:user) }
-    describe 'validations' do
-        it 'is valid with valid attributes' do
-            expect(Inventory.new(name: 'AAA')).to be_valid
-        end
+RSpec.describe Inventory, type: :model do
+  # test associations.
+  describe 'associations' do
+    it 'has many InventoryFood' do
+      assc = described_class.reflect_on_association(:inventory_foods)
+      expect(assc.macro).to eq :has_many
+    end
 
-        it 'is not valid without a name' do
-            expect(Inventory.new).to_not be_valid
-        end
+    it 'belongs to User' do
+      assc = described_class.reflect_on_association(:user)
+      expect(assc.macro).to eq :belongs_to
     end
-    end
+  end
+end
+# test validations.
+describe 'validations' do
+  it 'is not valid without a name' do
+    expect(Inventory.new).to_not be_valid
+  end
+end
