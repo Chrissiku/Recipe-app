@@ -12,9 +12,9 @@
 - Libraries: `Cancancan`, `Devise`
 - Technologies: Git, Gitflow, Linters, Github, PostgreSql, Rspec, Capybara, Robocop
 
-## Live Demo (not available yet)
+## Live Demo
 
-<!-- [Live Demo Link](https://livedemo.com) -->
+[Live Demo Link](https://evening-citadel-06597.herokuapp.com/) 
 
 
 ## Getting Started
