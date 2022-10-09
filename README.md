@@ -14,8 +14,10 @@
 
 ## Live Demo
 
-[Live Demo Link](https://evening-citadel-06597.herokuapp.com/) 
+[Live Demo Link](https://infinite-ravine-36732.herokuapp.com/) 
 
+## Sing_up and Login instructions
+- After you create you new account go back to the login button then you could be able to login
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
